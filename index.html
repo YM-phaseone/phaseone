@@ -1,54 +1,42 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>株式会社フェーズワン｜Web・動画制作</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>予約フォーム</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
-    <h1>「想い」をカタチに。<br>福祉の力で、伝わるWebと動画を。</h1>
-    <p>中小企業・店舗・団体の皆さまへ。<br>高品質・低コストで、心を動かす制作を。</p>
-    <a href="#contact" class="cta-button">お問い合わせ・お見積もりはこちら</a>
-  </header>
+<form class="reservation-form">
+  <h2>ご予約はこちらから！</h2>
 
-  <section class="benefits">
-    <h2>フェーズワンが選ばれる理由</h2>
-    <ul>
-      <li>✔ コストを抑えた高品質な制作</li>
-      <li>✔ 福祉的価値に共感する安心のパートナー</li>
-      <li>✔ 地域密着・柔軟な対応力</li>
-    </ul>
-  </section>
+  <div class="form-row">
+    <span class="label-text">お名前</span>
+    <input type="text" name="name" required>
+  </div>
 
-  <section class="flow">
-    <h2>ホームページ制作の流れ</h2>
-    <ol>
-      <li>ヒアリング・ご相談</li>
-      <li>構成・デザイン提案</li>
-      <li>コーディング・実装</li>
-      <li>公開・運用サポート</li>
-    </ol>
-  </section>
+  <div class="form-row">
+    <span class="label-text">メールアドレス</span>
+    <input type="email" name="email" required>
+  </div>
 
-  <section class="flow">
-    <h2>動画制作の流れ</h2>
-    <ol>
-      <li>目的・構成の打ち合わせ</li>
-      <li>撮影・編集</li>
-      <li>ナレーション・字幕対応</li>
-      <li>納品・SNS活用サポート</li>
-    </ol>
-  </section>
+  <div class="form-row">
+    <span class="label-text">予約メニュー</span>
+    <div class="radio-group">
+      <label><input type="radio" name="menu" value="cut" required>カット</label>
+      <label><input type="radio" name="menu" value="cut-color">カット+カラー</label>
+      <label><input type="radio" name="menu" value="head-spa">ヘッドスパ</label>
+    </div>
+  </div>
 
-  <section class="cta" id="contact">
-    <h2>まずはお気軽にご相談ください</h2>
-    <a href="mailto:info@example.com" class="cta-button">無料で相談する</a>
-  </section>
+  <div class="form-row">
+    <span class="label-text">ご意見</span>
+    <textarea name="message" rows="5"></textarea>
+  </div>
 
-  <footer>
-    <p>&copy; 2025 株式会社フェーズワン</p>
-  </footer>
+  <div class="button-group">
+    <button type="submit" class="submit-btn">予約する</button>
+    <button type="reset" class="reset-btn">リセット</button>
+  </div>
+</form>
 </body>
 </html>
