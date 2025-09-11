@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        HTML {
+            font-size: calc(10 / 1280 * 100vw);
+        }
+        @media screen and (width: 699.98px) {
+            HTML {
+                font-size: calc(10 / 375 * 100vw);
+            }
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 5%;
+            position: absolute;
+            width: 90%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        .header-left {
+            background-color: #333;
+            color: #fff;
+            padding: 0.5rem 1.5rem;
+            font-weight: bold;
+            letter-spacing: 0.1rem;
+        }
+
+        .header-right a {
+            color: #333;
+            text-decoration: none;
+            margin-left: 3rem;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 50vw;
+            background-image: url('mainvisual.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            margin-top: 8rem;
+        }
+
+        .section {
+            padding: 8rem 10%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            margin-bottom: 6rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 5rem;
+            height: 0.2rem;
+            background-color: #333;
+            margin: 1rem auto 0;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4rem;
+            max-width: 80rem;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .about-content img {
+            border-radius: 50%;
+            width: 12rem;
+            height: 12rem;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .about-text h3 {
+            margin-top: 0;
+            font-size: 2.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            font-size: 1.5rem;
+            color: #555;
+        }
+
+        .bicycle-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .bicycle-item {
+            width: 30%;
+            min-width: 28rem;
+            text-align: left;
+            box-sizing: border-box;
+        }
+
+        .bicycle-item img {
+            width: 100%;
+            height: 20rem;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+        }
+
+        .bicycle-item h4 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.6rem;
+        }
+
+        .bicycle-item p {
+            font-size: 1.4rem;
+            color: #666;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.2rem;
+            color: #888;
+            margin-top: 5rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 700px) {
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .bicycle-item {
+                width: 90%;
+            }
+
+            .header-right a {
+                margin-left: 1.5rem;
+            }
+
+            .section {
+                padding: 6rem 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">Profile</div>
+        <nav class="header-right">
+            <a href="#about">About</a>
+            <a href="#bicycle">Bicycle</a>
+        </nav>
+    </header>
+
+    <div class="hero-image"></div>
+
+    <section id="about" class="section">
+        <h2 class="section-title">About</h2>
+        <div class="about-content">
+            <img src="マスクグループ 1.png" alt="Profile Picture">
+            <div class="about-text">
+                <h3>KAKENU MIYAICHI</h3>
+                <p>テキストテキストテキストテキストテキストテキスト</p>
+                <p>テキストテキストテキストテキストテキストテキスト</p>
+                <p>テキストテキストテキストテキストテキストテキスト</p>
+                <p>テキストテキストテキストテキストテキストテキスト</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="bicycle" class="section">
+        <h2 class="section-title">Bicycle</h2>
+        <div class="bicycle-gallery">
+            <div class="bicycle-item">
+                <img src="bicycle1.png" alt="Bicycle Image 1">
+                <h4>タイトルタイトル</h4>
+                <p>テキストテキストテキスト</p>
+            </div>
+            <div class="bicycle-item">
+                <img src="bicycle2.png" alt="Bicycle Image 2">
+                <h4>タイトルタイトル</h4>
+                <p>テキストテキストテキスト</p>
+            </div>
+            <div class="bicycle-item">
+                <img src="bicycle3.png" alt="Bicycle Image 3">
+                <h4>タイトルタイトル</h4>
+                <p>テキストテキストテキスト</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Profile</p>
+    </footer>
+</body>
+</html>
